@@ -9,7 +9,7 @@
 
 namespace Xidea\Component\Product\Builder;
 
-use Symfony\Component\Security\Core\User\UserInterface;
+use Xidea\Component\Product\Model\AuthorInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -24,10 +24,10 @@ interface ProductBuilderInterface
     /**
      * @param UserInterface $author
      */
-    function setAuthor(UserInterface $author);
+    function setAuthor(AuthorInterface $author);
     
     /**
-     * @return \Xidea\Component\Product\ProductInterface
+     * @return \Xidea\Component\Product\Model\ProductInterface
      */
     function getProduct();
 }

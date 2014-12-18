@@ -15,7 +15,7 @@ namespace Xidea\Component\Product\Factory;
 interface ProductFactoryInterface
 {
     /**
-     * @return \Xidea\Component\Product\ProductInterface
+     * @return \Xidea\Component\Product\Model\ProductInterface
      */
     public function create();
 }

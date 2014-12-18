@@ -9,7 +9,7 @@
 
 namespace Xidea\Component\Product\Manager;
 
-use Xidea\Component\Product\ProductInterface;
+use Xidea\Component\Product\Model\ProductInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>

@@ -9,9 +9,8 @@
 
 namespace Xidea\Component\Product\Builder;
 
-use Symfony\Component\Security\Core\User\UserInterface;
-
-use Xidea\Component\Product\Factory\ProductFactoryInterface;
+use Xidea\Component\Product\Factory\ProductFactoryInterface,
+    Xidea\Component\Product\Model\AuthorInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -49,7 +48,7 @@ class ProductBuilder implements ProductBuilderInterface
     /**
      * {@inheritdoc}
      */
-    public function setAuthor(UserInterface $author)
+    public function setAuthor(AuthorInterface $author)
     {
         $this->product->setAuthor($author);
     }

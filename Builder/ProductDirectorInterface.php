@@ -15,7 +15,7 @@ namespace Xidea\Component\Product\Builder;
 interface ProductDirectorInterface
 {
     /**
-     * @return \Xidea\Component\Product\ProductInterface
+     * @return \Xidea\Component\Product\Model\ProductInterface
      */
     function build();
 }

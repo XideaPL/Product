@@ -19,7 +19,7 @@ interface ProductLoaderInterface
      * 
      * @param int $id
      * 
-     * @return \Xidea\Component\Product\ProductInterface
+     * @return \Xidea\Component\Product\Model\ProductInterface
      */
     function load($id);
     
