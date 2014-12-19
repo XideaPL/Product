@@ -15,7 +15,7 @@ namespace Xidea\Component\Product\Provider;
 interface AuthorProviderInterface
 {
     /**
-     * @return \Xidea\Component\User\Model\AuthorInterface
+     * @return \Xidea\Component\Product\Model\AuthorInterface
      */
     public function provide();
 }
