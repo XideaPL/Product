@@ -9,10 +9,12 @@
 
 namespace Xidea\Component\Product\Loader;
 
+use Xidea\Component\Base\Loader\ObjectLoaderInterface;
+
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface ProductLoaderInterface
+interface ProductLoaderInterface extends ObjectLoaderInterface
 {
     /**
      * Returns a product by id.
@@ -22,18 +24,4 @@ interface ProductLoaderInterface
      * @return \Xidea\Component\Product\Model\ProductInterface
      */
     function load($id);
-    
-    /**
-     * Returns all products.
-     * 
-     * @return array
-     */
-    function loadAll();
-    
-    /**
-     * Returns a set of categories matching the criteria.
-     * 
-     * @return array
-     */
-    function loadBy(array $criteria, array $orderBy = array(), $limit = null, $offset = null);
 }
