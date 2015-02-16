@@ -14,13 +14,26 @@ namespace Xidea\Component\Product\Model;
  */
 interface ProductInterface
 {
-
     /**
      * Returns the product id.
      * 
      * @return string The product id
      */
     public function getId();
+    
+    /**
+     * Sets the product sku.
+     *
+     * @param string $sku
+     */
+    public function setSku($sku);
+    
+    /**
+     * Returns the product sku.
+     *
+     * @return string
+     */
+    public function getSku();
 
     /**
      * Sets the product name.

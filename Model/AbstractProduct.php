@@ -22,6 +22,11 @@ abstract class AbstractProduct implements ProductInterface
     /*
      * @var string
      */
+    protected $sku;
+    
+    /*
+     * @var string
+     */
     protected $name;
     
     /*
@@ -50,6 +55,22 @@ abstract class AbstractProduct implements ProductInterface
     public function getId()
     {
         return $this->id;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setSku($sku)
+    {
+        $this->sku = $sku;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getSku()
+    {
+        return $this->sku;
     }
     
     /**
