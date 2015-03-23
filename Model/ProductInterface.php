@@ -15,53 +15,81 @@ namespace Xidea\Component\Product\Model;
 interface ProductInterface
 {
     /**
-     * Returns the product id.
+     * Returns the id.
      * 
-     * @return string The product id
+     * @return string The id
      */
     public function getId();
     
     /**
-     * Sets the product sku.
+     * Sets the sku.
      *
      * @param string $sku
      */
     public function setSku($sku);
     
     /**
-     * Returns the product sku.
+     * Returns the sku.
      *
      * @return string
      */
     public function getSku();
 
     /**
-     * Sets the product name.
+     * Sets the name.
      *
      * @param string $name
      */
     public function setName($name);
     
     /**
-     * Returns the product name.
+     * Returns the name.
      *
      * @return string
      */
     public function getName();
 
     /**
-     * Sets the product description.
+     * Sets the description.
      *
      * @param string $description
      */
     public function setDescription($description);
     
     /**
-     * Returns the product description.
+     * Returns the description.
      *
      * @return string
      */
     public function getDescription();
+    
+    /**
+     * Sets the author.
+     * 
+     * @param AuthorInterface $author
+     */
+    public function setAuthor(AuthorInterface $author);
+
+    /**
+     * Returns the author.
+     *
+     * @return AuthorInterface
+     */
+    public function getAuthor();
+    
+    /**
+     * Sets the manufacturer.
+     * 
+     * @param ManufacturerInterface $manufacturer
+     */
+    public function setManufacturer(ManufacturerInterface $manufacturer);
+
+    /**
+     * Returns the manufacturer.
+     *
+     * @return ManufacturerInterface
+     */
+    public function getManufacturer();
 
     /**
      * @param datetime $createdAt
@@ -82,18 +110,4 @@ interface ProductInterface
      * @return datetime
      */
     public function getUpdatedAt();
-
-    /**
-     * Sets the author.
-     * 
-     * @param AuthorInterface $author
-     */
-    public function setAuthor(AuthorInterface $author);
-
-    /**
-     * Returns the author.
-     *
-     * @return AuthorInterface
-     */
-    public function getAuthor();
 }

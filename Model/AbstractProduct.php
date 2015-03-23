@@ -35,6 +35,16 @@ abstract class AbstractProduct implements ProductInterface
     protected $description;
     
     /*
+     * @var AuthorInterface
+     */
+    protected $author;
+    
+    /*
+     * @var ManufacturerInterface
+     */
+    protected $manufacturer;
+    
+    /*
      * @var datetime
      */
     protected $createdAt;
@@ -43,11 +53,6 @@ abstract class AbstractProduct implements ProductInterface
      * @var datetime
      */
     protected $updatedAt;
-    
-    /*
-     * @var AuthorInterface
-     */
-    protected $author;
     
     /**
      * @inheritDoc
@@ -104,6 +109,38 @@ abstract class AbstractProduct implements ProductInterface
     {
         return $this->description;
     }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setAuthor(AuthorInterface $author)
+    {
+        $this->author = $author;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setManufacturer(ManufacturerInterface $manufacturer)
+    {
+        $this->manufacturer = $manufacturer;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getManufacturer()
+    {
+        return $this->manufacturer;
+    }
 
     /**
      * @inheritDoc
@@ -135,21 +172,5 @@ abstract class AbstractProduct implements ProductInterface
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-    
-    /**
-     * @inheritDoc
-     */
-    public function setAuthor(AuthorInterface $author)
-    {
-        $this->author = $author;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getAuthor()
-    {
-        return $this->author;
     }
 }

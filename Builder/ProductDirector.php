@@ -16,16 +16,28 @@ use Xidea\Component\Product\Provider\AuthorProviderInterface;
  */
 class ProductDirector implements ProductDirectorInterface
 {
+    /*
+     * @var ProductBuilderInterface
+     */
     protected $productBuilder;
     
+    /*
+     * @var AuthorProviderInterface
+     */
     protected $authorProvider;
     
+    /**
+     * 
+     */
     public function __construct(ProductBuilderInterface $productBuilder, AuthorProviderInterface $authorProvider)
     {
         $this->productBuilder = $productBuilder;
         $this->authorProvider = $authorProvider;
     }
     
+    /**
+     * {@inheritdoc}
+     */
     public function build()
     {
         $this->productBuilder->create();
