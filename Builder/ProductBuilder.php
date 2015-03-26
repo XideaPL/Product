@@ -10,7 +10,8 @@
 namespace Xidea\Component\Product\Builder;
 
 use Xidea\Component\Base\Factory\ObjectFactoryInterface;
-use Xidea\Component\Product\Model\AuthorInterface;
+use Xidea\Component\Product\Model\ManufacturerInterface,
+    Xidea\Component\Product\Model\AuthorInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -21,7 +22,7 @@ class ProductBuilder implements ProductBuilderInterface
     /**
      * Currently built product.
      *
-     * @var ProductInterface
+     * @var \Xidea\Component\Product\Model\ProductInterface
      */
     protected $product;
 
@@ -43,6 +44,14 @@ class ProductBuilder implements ProductBuilderInterface
     public function create()
     {
         $this->product = $this->factory->create();
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setManufacturer(ManufacturerInterface $manufacturer)
+    {
+        $this->product->setManufacturer($manufacturer);
     }
 
     /**

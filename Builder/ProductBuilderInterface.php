@@ -9,7 +9,8 @@
 
 namespace Xidea\Component\Product\Builder;
 
-use Xidea\Component\Product\Model\AuthorInterface;
+use Xidea\Component\Product\Model\ManufacturerInterface,
+    Xidea\Component\Product\Model\AuthorInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -22,7 +23,12 @@ interface ProductBuilderInterface
     function create();
     
     /**
-     * @param UserInterface $author
+     * @param ManufacturerInterface $manufacturer
+     */
+    function setManufacturer(ManufacturerInterface $manufacturer);
+    
+    /**
+     * @param AuthorInterface $author
      */
     function setAuthor(AuthorInterface $author);
     
