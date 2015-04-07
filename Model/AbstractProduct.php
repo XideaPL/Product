@@ -35,11 +35,6 @@ abstract class AbstractProduct implements ProductInterface
     protected $description;
     
     /*
-     * @var AuthorInterface
-     */
-    protected $author;
-    
-    /*
      * @var ManufacturerInterface
      */
     protected $manufacturer;
@@ -108,22 +103,6 @@ abstract class AbstractProduct implements ProductInterface
     public function getDescription()
     {
         return $this->description;
-    }
-    
-    /**
-     * @inheritDoc
-     */
-    public function setAuthor(AuthorInterface $author)
-    {
-        $this->author = $author;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getAuthor()
-    {
-        return $this->author;
     }
     
     /**

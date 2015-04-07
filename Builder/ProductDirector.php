@@ -9,8 +9,6 @@
 
 namespace Xidea\Component\Product\Builder;
 
-use Xidea\Component\Product\Provider\AuthorProviderInterface;
-
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
@@ -21,18 +19,12 @@ class ProductDirector implements ProductDirectorInterface
      */
     protected $productBuilder;
     
-    /*
-     * @var AuthorProviderInterface
-     */
-    protected $authorProvider;
-    
     /**
      * 
      */
-    public function __construct(ProductBuilderInterface $productBuilder, AuthorProviderInterface $authorProvider)
+    public function __construct(ProductBuilderInterface $productBuilder)
     {
         $this->productBuilder = $productBuilder;
-        $this->authorProvider = $authorProvider;
     }
     
     /**
@@ -41,7 +33,6 @@ class ProductDirector implements ProductDirectorInterface
     public function build()
     {
         $this->productBuilder->create();
-        $this->productBuilder->setAuthor($this->authorProvider->provide());
         
         return $this->productBuilder->getProduct();
     }

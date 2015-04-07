@@ -64,20 +64,6 @@ interface ProductInterface
     public function getDescription();
     
     /**
-     * Sets the author.
-     * 
-     * @param AuthorInterface $author
-     */
-    public function setAuthor(AuthorInterface $author);
-
-    /**
-     * Returns the author.
-     *
-     * @return AuthorInterface
-     */
-    public function getAuthor();
-    
-    /**
      * Sets the manufacturer.
      * 
      * @param ManufacturerInterface $manufacturer
