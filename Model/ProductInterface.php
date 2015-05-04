@@ -19,81 +19,81 @@ interface ProductInterface
      * 
      * @return string The id
      */
-    public function getId();
+    function getId();
     
     /**
      * Sets the sku.
      *
      * @param string $sku
      */
-    public function setSku($sku);
+    function setSku($sku);
     
     /**
      * Returns the sku.
      *
      * @return string
      */
-    public function getSku();
+    function getSku();
 
     /**
      * Sets the name.
      *
      * @param string $name
      */
-    public function setName($name);
+    function setName($name);
     
     /**
      * Returns the name.
      *
      * @return string
      */
-    public function getName();
+    function getName();
 
     /**
      * Sets the description.
      *
      * @param string $description
      */
-    public function setDescription($description);
+    function setDescription($description);
     
     /**
      * Returns the description.
      *
      * @return string
      */
-    public function getDescription();
+    function getDescription();
     
     /**
      * Sets the manufacturer.
      * 
      * @param ManufacturerInterface $manufacturer
      */
-    public function setManufacturer(ManufacturerInterface $manufacturer);
+    function setManufacturer(ManufacturerInterface $manufacturer);
 
     /**
      * Returns the manufacturer.
      *
      * @return ManufacturerInterface
      */
-    public function getManufacturer();
+    function getManufacturer();
 
     /**
      * @param datetime $createdAt
      */
-    public function setCreatedAt(\DateTime $createdAt = null);
+    function setCreatedAt(\DateTime $createdAt = null);
 
     /**
      * @return datetime
      */
-    public function getCreatedAt();
+    function getCreatedAt();
 
     /**
      * @param datetime $updatedAt
      */
-    public function setUpdatedAt(\DateTime $updatedAt = null);
+    function setUpdatedAt(\DateTime $updatedAt = null);
 
     /**
      * @return datetime
      */
-    public function getUpdatedAt();
+    function getUpdatedAt();
 }
