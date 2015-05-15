@@ -9,12 +9,12 @@
 
 namespace Xidea\Component\Product\Loader;
 
-use Xidea\Component\Base\Loader\ObjectLoaderInterface;
+use Xidea\Component\Base\Loader\ModelLoaderInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface ManufacturerLoaderInterface extends ObjectLoaderInterface
+interface ManufacturerLoaderInterface extends ModelLoaderInterface
 {
     /**
      * Returns a manufacturer by id.
