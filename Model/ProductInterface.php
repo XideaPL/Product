@@ -34,6 +34,20 @@ interface ProductInterface
      * @return string
      */
     function getSku();
+    
+    /**
+     * Sets the slug.
+     *
+     * @param string $slug
+     */
+    function setSlug($slug);
+    
+    /**
+     * Returns the slug.
+     *
+     * @return string
+     */
+    function getSlug();
 
     /**
      * Sets the name.
@@ -64,6 +78,104 @@ interface ProductInterface
     function getDescription();
     
     /**
+     * Sets the url.
+     *
+     * @param string $url
+     */
+    function setUrl($url);
+    
+    /**
+     * Returns the url.
+     *
+     * @return string
+     */
+    function getUrl();
+    
+    /**
+     * Sets the price.
+     *
+     * @param float $price
+     */
+    function setPrice($price);
+    
+    /**
+     * Returns the price.
+     *
+     * @return float
+     */
+    function getPrice();
+    
+    /**
+     * Sets the retailPrice.
+     *
+     * @param float $retailPrice
+     */
+    function setRetailPrice($retailPrice);
+    
+    /**
+     * Returns the retailPrice.
+     *
+     * @return float
+     */
+    function getRetailPrice();
+    
+    /**
+     * Sets the qty.
+     *
+     * @param int $qty
+     */
+    function setQty($qty);
+    
+    /**
+     * Returns the qty.
+     *
+     * @return int
+     */
+    function getQty();
+    
+    /**
+     * Sets the width.
+     *
+     * @param string $width
+     */
+    function setWidth($width);
+    
+    /**
+     * Returns the width.
+     *
+     * @return string
+     */
+    function getWidth();
+    
+    /**
+     * Sets the height.
+     *
+     * @param string $height
+     */
+    function setHeight($height);
+    
+    /**
+     * Returns the height.
+     *
+     * @return string
+     */
+    function getHeight();
+    
+    /**
+     * Sets the depth.
+     *
+     * @param string $depth
+     */
+    function setDepth($depth);
+    
+    /**
+     * Returns the depth.
+     *
+     * @return string
+     */
+    function getDepth();
+    
+    /**
      * Sets the manufacturer.
      * 
      * @param ManufacturerInterface $manufacturer
@@ -78,22 +190,32 @@ interface ProductInterface
     function getManufacturer();
 
     /**
-     * @param datetime $createdAt
+     * @param \DateTime $availableOn
+     */
+    function setAvailableOn(\DateTime $availableOn = null);
+
+    /**
+     * @return \DateTime
+     */
+    function getAvailableOn();
+    
+    /**
+     * @param \DateTime $createdAt
      */
     function setCreatedAt(\DateTime $createdAt = null);
 
     /**
-     * @return datetime
+     * @return \DateTime
      */
     function getCreatedAt();
 
     /**
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     function setUpdatedAt(\DateTime $updatedAt = null);
 
     /**
-     * @return datetime
+     * @return \DateTime
      */
     function getUpdatedAt();
 }

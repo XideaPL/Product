@@ -27,6 +27,11 @@ abstract class AbstractProduct implements ProductInterface
     /*
      * @var string
      */
+    protected $slug;
+    
+    /*
+     * @var string
+     */
     protected $name;
     
     /*
@@ -35,17 +40,57 @@ abstract class AbstractProduct implements ProductInterface
     protected $description;
     
     /*
+     * @var string
+     */
+    protected $url;
+    
+    /*
+     * @var float
+     */
+    protected $price;
+    
+    /*
+     * @var float
+     */
+    protected $retailPrice;
+    
+    /*
+     * @var int
+     */
+    protected $qty;
+    
+    /*
+     * @var int
+     */
+    protected $width;
+    
+    /*
+     * @var int
+     */
+    protected $height;
+    
+    /*
+     * @var int
+     */
+    protected $depth;
+    
+    /*
      * @var ManufacturerInterface
      */
     protected $manufacturer;
     
     /*
-     * @var datetime
+     * @var \DateTime
+     */
+    protected $availableOn;
+    
+    /*
+     * @var \DateTime
      */
     protected $createdAt;
     
     /*
-     * @var datetime
+     * @var \DateTime
      */
     protected $updatedAt;
     
@@ -63,6 +108,8 @@ abstract class AbstractProduct implements ProductInterface
     public function setSku($sku)
     {
         $this->sku = $sku;
+        
+        return $this;
     }
     
     /**
@@ -76,9 +123,29 @@ abstract class AbstractProduct implements ProductInterface
     /**
      * @inheritDoc
      */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    
+    /**
+     * @inheritDoc
+     */
     public function setName($name)
     {
         $this->name = $name;
+        
+        return $this;
     }
     
     /**
@@ -95,6 +162,8 @@ abstract class AbstractProduct implements ProductInterface
     public function setDescription($description)
     {
         $this->description = $description;
+        
+        return $this;
     }
     
     /**
@@ -108,9 +177,137 @@ abstract class AbstractProduct implements ProductInterface
     /**
      * @inheritDoc
      */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setRetailPrice($retailPrice)
+    {
+        $this->retailPrice = $retailPrice;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getRetailPrice()
+    {
+        return $this->retailPrice;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setQty($qty)
+    {
+        $this->qty = $qty;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getQty()
+    {
+        return $this->qty;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setDepth($depth)
+    {
+        $this->depth = $depth;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getDepth()
+    {
+        return $this->depth;
+    }
+    
+    /**
+     * @inheritDoc
+     */
     public function setManufacturer(ManufacturerInterface $manufacturer)
     {
         $this->manufacturer = $manufacturer;
+        
+        return $this;
     }
 
     /**
@@ -120,6 +317,24 @@ abstract class AbstractProduct implements ProductInterface
     {
         return $this->manufacturer;
     }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setAvailableOn(\DateTime $availableOn = null)
+    {
+        $this->availableOn = $availableOn;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getAvailableOn()
+    {
+        return $this->availableOn;
+    }
 
     /**
      * @inheritDoc
@@ -127,6 +342,8 @@ abstract class AbstractProduct implements ProductInterface
     public function setCreatedAt(\DateTime $createdAt = null)
     {
         $this->createdAt = $createdAt;
+        
+        return $this;
     }
     
     /**
@@ -143,6 +360,8 @@ abstract class AbstractProduct implements ProductInterface
     public function setUpdatedAt(\DateTime $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
+        
+        return $this;
     }
 
     /**
