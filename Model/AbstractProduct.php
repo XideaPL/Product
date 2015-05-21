@@ -42,6 +42,11 @@ abstract class AbstractProduct implements ProductInterface
     /*
      * @var string
      */
+    protected $shortDescription;
+    
+    /*
+     * @var string
+     */
     protected $url;
     
     /*
@@ -172,6 +177,24 @@ abstract class AbstractProduct implements ProductInterface
     public function getDescription()
     {
         return $this->description;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setShortDescription($shortDescription)
+    {
+        $this->shortDescription = $shortDescription;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getShortDescription()
+    {
+        return $this->shortDescription;
     }
     
     /**

@@ -78,6 +78,20 @@ interface ProductInterface
     function getDescription();
     
     /**
+     * Sets the short description.
+     *
+     * @param string $shortDescription
+     */
+    function setShortDescription($shortDescription);
+    
+    /**
+     * Returns the short description.
+     *
+     * @return string
+     */
+    function getShortDescription();
+    
+    /**
      * Sets the url.
      *
      * @param string $url
