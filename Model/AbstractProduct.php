@@ -65,17 +65,17 @@ abstract class AbstractProduct implements ProductInterface
     protected $qty;
     
     /*
-     * @var int
+     * @var float
      */
     protected $width;
     
     /*
-     * @var int
+     * @var float
      */
     protected $height;
     
     /*
-     * @var int
+     * @var float
      */
     protected $depth;
     

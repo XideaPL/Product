@@ -150,42 +150,42 @@ interface ProductInterface
     /**
      * Sets the width.
      *
-     * @param string $width
+     * @param float $width
      */
     function setWidth($width);
     
     /**
      * Returns the width.
      *
-     * @return string
+     * @return float
      */
     function getWidth();
     
     /**
      * Sets the height.
      *
-     * @param string $height
+     * @param float $height
      */
     function setHeight($height);
     
     /**
      * Returns the height.
      *
-     * @return string
+     * @return float
      */
     function getHeight();
     
     /**
      * Sets the depth.
      *
-     * @param string $depth
+     * @param float $depth
      */
     function setDepth($depth);
     
     /**
      * Returns the depth.
      *
-     * @return string
+     * @return float
      */
     function getDepth();
     
