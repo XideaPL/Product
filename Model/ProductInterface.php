@@ -214,6 +214,34 @@ interface ProductInterface
     function getAvailableOn();
     
     /**
+     * Sets the image.
+     *
+     * @param float $image
+     */
+    function setImage($image);
+    
+    /**
+     * Returns the image.
+     *
+     * @return float
+     */
+    function getImage();
+    
+    /**
+     * Sets the image label.
+     *
+     * @param float $imageLabel
+     */
+    function setImageLabel($imageLabel);
+    
+    /**
+     * Returns the image label.
+     *
+     * @return float
+     */
+    function getImageLabel();
+    
+    /**
      * @param \DateTime $createdAt
      */
     function setCreatedAt(\DateTime $createdAt = null);

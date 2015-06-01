@@ -90,6 +90,16 @@ abstract class AbstractProduct implements ProductInterface
     protected $availableOn;
     
     /*
+     * @var string
+     */
+    protected $image;
+    
+    /*
+     * @var string
+     */
+    protected $imageLabel;
+    
+    /*
      * @var \DateTime
      */
     protected $createdAt;
@@ -357,6 +367,38 @@ abstract class AbstractProduct implements ProductInterface
     public function getAvailableOn()
     {
         return $this->availableOn;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setImageLabel($imageLabel)
+    {
+        $this->imageLabel = $imageLabel;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getImageLabel()
+    {
+        return $this->imageLabel;
     }
 
     /**

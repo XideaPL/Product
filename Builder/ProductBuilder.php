@@ -32,6 +32,10 @@ class ProductBuilder implements ProductBuilderInterface
      */
     protected $factory;
 
+    /**
+     * 
+     * @param ModelFactoryInterface $productFactory
+     */
     public function __construct(ModelFactoryInterface $productFactory)
     {
         $this->factory = $productFactory;
