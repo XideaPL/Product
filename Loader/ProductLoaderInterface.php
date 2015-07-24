@@ -24,4 +24,14 @@ interface ProductLoaderInterface extends ModelLoaderInterface
      * @return \Xidea\Component\Product\Model\ProductInterface
      */
     function load($id);
+    
+    /**
+     * Returns a set of objects.
+     * 
+     * @param int $page
+     * @param int $limit
+     * 
+     * @return array
+     */
+    function loadByPage($page = 1, $limit = 25);
 }
