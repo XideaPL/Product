@@ -1,7 +1,7 @@
 {
     "name": "xideapl/product",
     "type": "library",
-    "description": "Xidea Product Component",
+    "description": "Xidea Product",
     "keywords": [],
     "homepage": "http://xidea.pl",
     "license": "MIT",
@@ -18,9 +18,8 @@
     "require-dev": {
     },
     "autoload": {
-        "psr-0": { "Xidea\\Component\\Product": "" }
+        "psr-4": { "Xidea\\Product\\": "src/" }
     },
-    "target-dir": "Xidea/Component/Product",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {

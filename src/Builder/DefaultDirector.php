@@ -7,22 +7,25 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\Product\Builder;
+namespace Xidea\Product\Builder;
+
+use Xidea\Product\DirectorInterface;
+use Xidea\Product\BuilderInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-class ProductDirector implements ProductDirectorInterface
+class DefaultDirector implements DirectorInterface
 {
     /*
-     * @var ProductBuilderInterface
+     * @var BuilderInterface
      */
     protected $productBuilder;
     
     /**
      * 
      */
-    public function __construct(ProductBuilderInterface $productBuilder)
+    public function __construct(BuilderInterface $productBuilder)
     {
         $this->productBuilder = $productBuilder;
     }

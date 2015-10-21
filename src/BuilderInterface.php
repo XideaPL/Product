@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\Product\Builder;
+namespace Xidea\Product;
 
-use Xidea\Component\Product\Model\ManufacturerInterface;
+use Xidea\Product\Manufacturer\ManufacturerInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface ProductBuilderInterface
+interface BuilderInterface
 {
     /**
      * @return void
@@ -27,7 +27,7 @@ interface ProductBuilderInterface
     function setManufacturer(ManufacturerInterface $manufacturer);
     
     /**
-     * @return \Xidea\Component\Product\Model\ProductInterface
+     * @return \Xidea\Product\ProductInterface
      */
     function getProduct();
 }

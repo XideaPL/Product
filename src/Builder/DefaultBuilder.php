@@ -7,21 +7,22 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\Product\Builder;
+namespace Xidea\Product\Builder;
 
 use Xidea\Component\Base\Factory\ModelFactoryInterface;
-use Xidea\Component\Product\Model\ManufacturerInterface;
+use Xidea\Product\BuilderInterface;
+use Xidea\Product\Manufacturer\ManufacturerInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-class ProductBuilder implements ProductBuilderInterface
+class DefaultBuilder implements BuilderInterface
 {
 
     /**
      * Currently built product.
      *
-     * @var \Xidea\Component\Product\Model\ProductInterface
+     * @var \Xidea\Product\ProductInterface
      */
     protected $product;
 

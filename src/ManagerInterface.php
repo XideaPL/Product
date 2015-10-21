@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\Product\Manager;
+namespace Xidea\Product;
 
-use Xidea\Component\Product\Model\ProductInterface;
+use Xidea\Product\ProductInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface ProductManagerInterface
+interface ManagerInterface
 {
     /**
      * Saves a product.

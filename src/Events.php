@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\Product;
+namespace Xidea\Product;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-abstract class ProductEvents
+abstract class Events
 {
     /**
      * The PRE_SAVE event occurs when the product is saved.
