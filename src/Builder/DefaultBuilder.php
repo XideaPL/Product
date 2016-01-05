@@ -9,9 +9,9 @@
 
 namespace Xidea\Product\Builder;
 
-use Xidea\Component\Base\Factory\ModelFactoryInterface;
+use Xidea\Base\Model\FactoryInterface;
 use Xidea\Product\BuilderInterface;
-use Xidea\Product\Manufacturer\ManufacturerInterface;
+use Xidea\Product\ManufacturerInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -29,17 +29,17 @@ class DefaultBuilder implements BuilderInterface
     /**
      * Product factory.
      *
-     * @var ModelFactoryInterface
+     * @var FactoryInterface
      */
     protected $factory;
 
     /**
      * 
-     * @param ModelFactoryInterface $productFactory
+     * @param FactoryInterface $factory
      */
-    public function __construct(ModelFactoryInterface $productFactory)
+    public function __construct(FactoryInterface $factory)
     {
-        $this->factory = $productFactory;
+        $this->factory = $factory;
     }
 
     /**
@@ -48,6 +48,8 @@ class DefaultBuilder implements BuilderInterface
     public function create()
     {
         $this->product = $this->factory->create();
+        
+        return $this;
     }
     
     /**
@@ -56,6 +58,8 @@ class DefaultBuilder implements BuilderInterface
     public function setManufacturer(ManufacturerInterface $manufacturer)
     {
         $this->product->setManufacturer($manufacturer);
+        
+        return $this;
     }
 
     /**

@@ -9,7 +9,7 @@
 
 namespace Xidea\Product;
 
-use Xidea\Product\Manufacturer\ManufacturerInterface;
+use Xidea\Product\ManufacturerInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -17,12 +17,14 @@ use Xidea\Product\Manufacturer\ManufacturerInterface;
 interface BuilderInterface
 {
     /**
-     * @return void
+     * @return BuilderInterface
      */
     function create();
     
     /**
      * @param ManufacturerInterface $manufacturer
+     * 
+     * @return BuilderInterface
      */
     function setManufacturer(ManufacturerInterface $manufacturer);
     

@@ -9,6 +9,8 @@
 
 namespace Xidea\Product\Manufacturer;
 
+use Xidea\Product\ManufacturerInterface;
+
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */

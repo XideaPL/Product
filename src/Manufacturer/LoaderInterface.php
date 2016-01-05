@@ -9,7 +9,7 @@
 
 namespace Xidea\Product\Manufacturer;
 
-use Xidea\Component\Base\Loader\ModelLoaderInterface;
+use Xidea\Base\Model\LoaderInterface as ModelLoaderInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -21,7 +21,7 @@ interface LoaderInterface extends ModelLoaderInterface
      * 
      * @param int $id
      * 
-     * @return ManufacturerInterface
+     * @return \Xidea\Product\ManufacturerInterface
      */
     function load($id);
 }

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Product\Manufacturer;
+namespace Xidea\Product;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
